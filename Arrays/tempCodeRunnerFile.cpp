@@ -1,4 +1,5 @@
-   // for (int i = 0; i <size; i++)
+cout<<"Reverse Array : -"<<endl;
+    // for (int i = 0; i < 6; i++)
     // {
-    //     cout<<arrRandomF[i];
+    //     cout<<arr[i]<<endl;
     // }

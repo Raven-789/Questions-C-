@@ -1,3 +1,6 @@
+//In arrays when you pass it to another function changes are always done on original array
+//As you give the starting address in arr[i] not the value so fucntion gets an address rather than the value itself
+
 // #include <iostream>
 // using namespace std;
 
@@ -27,6 +30,16 @@
 
 #include<iostream>
 using namespace std;
+
+void printArr(int arr[],int size){
+    for (int i = 0; i < 100; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<"Printing Done!!";
+}
+
+
 int main(){
      //(IT ONLY WORKS FOR ZERO 0) How to initialize arr with only 1 val 
     // int arr[100]={0},i=0;
@@ -48,8 +61,12 @@ int main(){
 
     int arr2[100]={1,2,3,4}; //this also only inititalizes only first 4 indexes observe you can get it easily
                             //and all other vals are initialized by 0
-    for (int i = 0; i < 100; i++)
+    printArr(arr2,100); //Passed Arrays into function
+
+    char ch[5]={'a','b','r','d','p'};
+    for (int i = 0; i < 5; i++)
     {
-        cout<<arr2[i]<<" ";
+        cout<<ch[i]<<" ";
     }
+    
 }
