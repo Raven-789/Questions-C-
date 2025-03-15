@@ -7,20 +7,23 @@ void rev(int arr[],int size){
     {
         for (int i = 0; i < (size/2); i++)
         {
-            // int num=size-i;
+            // int num=size-i-1;
             temp=arr[i];
-            // cout<<arr[i]<<"  "<<arr[num]<<endl;
-            arr[i]=arr[size-i];
-            arr[size-i]=temp;
-            cout<<arr[i]<<"  "<<arr[size-i]<<endl;
+            cout<<arr[i]<<"  "<<arr[size-1-i]<<endl;
+            arr[i]=arr[size-i-1];
+            arr[size-i-1]=temp;
+            cout<<arr[i]<<"  "<<arr[size-i-1]<<endl;
 
         }
     }else{
         for (int i = 0; i < (size-1)/2; i++)
         {
+            // int num=size-i;
             temp=arr[i];
-            arr[i]=arr[size-i];
-            arr[size-i]=temp;
+            // cout<<arr[i]<<"  "<<arr[num]<<endl;
+            arr[i]=arr[size-i-1];
+            arr[size-i-1]=temp;
+            cout<<arr[i]<<"  "<<arr[size-i-1]<<endl;
         }
     }
     // for (int i = 0; i < 6; i++)
@@ -44,15 +47,22 @@ void revv(int arr[],int size){
     
 }
 
-int main(){
-    int arr[6]={1,2,3,4,5,6};
-    int arr1[7]={1,2,3,4,5,6,9};
-    // rev(arr,6);
-    revv(arr,5); //In size here put the last index value or it takes garbage value which gives error
+void print(int arr[],int size){
     cout<<"Reverse Array : -"<<endl;
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < size; i++) 
     {
         cout<<arr[i]<<endl;
     }
+}
+
+int main(){
+    int arr[6]={1,2,3,4,5,6};
+    int arr1[7]={1,2,3,4,5,6,9};
+    rev(arr1,7);
+    revv(arr,5); //In size here we had to put the last index or first index value or it takes garbage value which
+     //  gave an  error cause' you used arr[i+1] and at the last index or for 1st val too. it went garbage that's why
+     print(arr1,7);
+     print(arr,6);
+    
     
 }
