@@ -104,10 +104,10 @@
 // ⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻ Negative no. to Binary⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻⸻
 //
 
-// #include<iostream>
-// #include<math.h>
-// using namespace std;
-// int main(){
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
 //     // int num,i=0,mask;
 //     // float bin;
 //     // cin>>num;
@@ -127,14 +127,14 @@
 //     // }
 //     // cout<<bin;
 
-//     int num;
-//     cin >> num;
-//     unsigned int bin = static_cast<unsigned int>(num); //this is to simplify -ve no. storage as unsigned it makes it easier
+    int num;
+    cin >> num;
+    unsigned int bin = static_cast<unsigned int>(num); //this is to simplify -ve no. storage as unsigned it makes it easier
 
-//     cout << "Binary representation: ";
-//     for (int i = 31; i >= 0; i--) {
-//         cout << ((bin >> i) & 1);     // here as we stored the no. in unsigned int its easier 
-//             //so we just use 31 as its storage and use & operator to get the stored bits AI is crwwaaazzyy
-//     }
-//     cout << endl;
-// }
+    cout << "Binary representation: ";
+    for (int i = 31; i >= 0; i--) {
+        cout << ((bin >> i) & 1);     // here as we stored the no. in unsigned int its easier 
+            //so we just use 31 as its storage and use & operator to get the stored bits AI is crwwaaazzyy
+    }
+    cout << endl;
+}
