@@ -1,4 +1,5 @@
 #include<iostream>
+#include<vector>
 using namespace std;
 void rev(int arr[],int size){
     int temp=0;
@@ -47,6 +48,24 @@ void revv(int arr[],int size){
     
 }
 
+void revLimited(vector <int> &arr,int l){
+    int s=l+1,e=arr.size()-1;
+    while (s<e)
+    {
+        swap(arr[s],arr[e]);
+        s++;
+        e--;
+    }
+
+    int size=arr.size();
+    cout<<endl<<"Reverse Array : -"<<endl;
+    for (int i = 0; i < size; i++) 
+    {
+        cout<<arr[i]<<endl;
+    }
+    
+}
+
 void print(int arr[],int size){
     cout<<"Reverse Array : -"<<endl;
     for (int i = 0; i < size; i++) 
@@ -55,7 +74,17 @@ void print(int arr[],int size){
     }
 }
 
+void printV(vector <int> &arr){
+    int size=arr.size();
+    cout<<"Reverse Array : -"<<endl;
+    for (int i = 0; i < size; i++) 
+    {
+        cout<<arr[i]<<endl;
+    }
+}
+
 int main(){
+    vector <int> arrV={1,2,3,4,5,6};
     int arr[6]={1,2,3,4,5,6};
     int arr1[7]={1,2,3,4,5,6,9};
     rev(arr1,7);
@@ -63,6 +92,8 @@ int main(){
      //  gave an  error cause' you used arr[i+1] and at the last index or for 1st val too. it went garbage that's why
      print(arr1,7);
      print(arr,6);
+     revLimited(arrV,3);
+     printV(arrV);//this won't work until you use "&" when passing vector as it'll be pass by value which doesn't work
     
     
 }

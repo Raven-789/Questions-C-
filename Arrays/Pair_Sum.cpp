@@ -25,7 +25,7 @@ void pair_sum(vector<int> &arr,int s){
 
 
 int main(){
-    vector<int>arr={1,2,3,4,5};
+    vector<int>arr={1,2,3,4,5,0};
     pair_sum(arr,5);
     // pairSumm(arr,5);
     // for (const auto &pair : result) {

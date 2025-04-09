@@ -5,13 +5,14 @@ using namespace std;
 
 int main(){
     vector <int>v;
+    
     vector <int>a(5,1);//Initializes every element by 1
     for (int i:a)
     {
         cout<<i<<" ";
 
     }cout<<endl;
-
+    // v.erase(v.begin()+1);
     vector <int> last(a);//To copy a vector into another one
 
     for (int i:last)
@@ -62,6 +63,8 @@ int main(){
     v.clear();
     cout<<"After Clear Size: "<<v.size()<<endl;
 
+
     cout<<"Max Size (This doesn't changes even after erase or pop it works for vector , Deque) "<<v.max_size()<<endl;
+
 
 }
