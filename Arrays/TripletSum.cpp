@@ -2,6 +2,47 @@
 #include<vector>
 #include<bits/stdc++.h>
 using namespace std;
+
+void tripletsum(vector<int> vec , int num ){
+    int minv;
+    int maxv;
+
+    for (int i = 0; i < vec.size(); i++)
+    {   
+        for (int j = i+1; j < vec.size(); j++)
+        {
+            for (int k = j+1; k < vec.size(); k++)
+            {
+                if (num == vec[i] + vec[j] + vec[k])
+                {
+                    
+                    if (vec[i] > vec[j] and vec[i] > vec[k])
+                    {
+                        minv = min(vec[j], vec[k]);
+                        maxv = max(vec[j], vec[k]);
+
+                        cout << minv << " "<<maxv<< " "  << vec[i] << endl;
+                    }
+                    else if (vec[j] > vec[i] and vec[j] > vec[k])
+                    {
+                        minv = min(vec[i], vec[k]);
+                        maxv = max(vec[i], vec[k]);
+
+                        cout << minv << " "<<maxv<< " "  << vec[j] << endl;
+                    }
+                    else 
+                    {
+                        minv = min(vec[j], vec[i]);
+                        maxv = max(vec[j], vec[i]);
+
+                        cout << minv << " "<<maxv<< " "  << vec[k] << endl;
+                    }
+                }
+            }    
+        }
+    }
+}
+
 void tripletSum(vector <int>arr,int s){
     vector<vector <int>>ans;
     for (int i = 0; i < arr.size(); i++){
@@ -48,7 +89,8 @@ void tripletSum(vector <int>arr,int s){
 
 
 int main(){
-    vector <int> arr={10 ,5 ,5 ,5 ,2};
+    vector <int> arr={10 ,5 ,5 ,5 ,2},arr2={98,2,1,0,99,5};
     tripletSum(arr,12);
+    tripletSum(arr2,100);
 }
 
