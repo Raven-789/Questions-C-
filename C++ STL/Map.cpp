@@ -6,13 +6,15 @@ using namespace std;
 //hash table (red black) O(1)
 
 int main(){
+    //if there are 2 same keys it updates the value in it but 2 same keys can't be there
     //Its sorted acc to the int in it
     map <int,string> m;
     m[1]="Monkey";
-    m[7]="D.";
     m[8]="Luffy";
+    m[7]="D.";
+    
 
-    m.insert({5,"bheem"});
+    // m.insert({5,"bheem"});
 
     cout<<"Before Erase"<<endl;
     for(auto i:m){

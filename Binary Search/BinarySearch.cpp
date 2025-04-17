@@ -22,7 +22,7 @@ int binarySearch(int arr[],int size,int key){
         else{
             end=mid-1;
         }
-        mid=start+(end-start)/2;
+       
         // mid=(start+end)/2;//this will return an error if the start and end are near limit of int variable so we use the other one above
         
     }

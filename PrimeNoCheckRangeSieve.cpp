@@ -1,5 +1,32 @@
 #include<iostream>
+#include<vector>
 using namespace std;
+//Segmented Sieve
+//Time complexity of thsi function is
+//O(n*log(log n))
+//Harmonic Progession 1/2+1/3+1/5+1/7... (2,3,5,7 are prime no.s)
+
+int countPrimes(int n){
+  int cnt=0;
+  vector <bool> prime(n+1,true);
+  prime[0]=prime[1]=false;
+
+  for (int i = 2; i < n; i++)
+  {
+    if (prime[i])
+    {
+      cnt++;
+      for (int j = 2*i; j < n; j=j+i)
+      {
+        prime[j]=0;
+      }
+      
+    }
+    
+  }
+  return cnt;
+}
+
 int main(){
 int num;
 cout<<"Enter number: ";

@@ -74,5 +74,27 @@ int main() {
     //You have to include memeory header file to use unique ptr
     unique_ptr<int>ptr3(new int(100));//Smart ptr deletes the allocated memory automatically
     cout<<"Value: "<<*ptr3<<endl;
+    
+    //How initialize pointers LATER
+    int i=5;
+    int *q=0;
+    q=&i;
+    //Copying a pointer
+    int *z=q;
+    cout<<*q<<" - "<<*z<<endl;
+    cout<<q<<" - "<<z<<endl;
+
+    //Bad practice
+    int *k; //now the pointer is pointing to a garbage value
+
+    //important concept
+    i=3;
+    int *t=&i;
+    cout<< (*t)++<<endl;
+    // *t=*t+1;
+    cout<<*t<<endl;
+    cout<<"before t "<<t<<endl;
+    t=t+1;//this doesn't makes the address +1 like if the address is 105 it doesn't get 106 it first leaves the exact space taken by that datatype as in int its 4 bytes so 105 becomes 109 ok
+    cout<<"after t "<<t<<endl;
     return 0;
 }

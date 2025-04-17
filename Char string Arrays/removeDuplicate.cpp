@@ -23,7 +23,6 @@ string removeAdjDuplicates(string &s){
             // cout<<s[i]<<endl;
             i=0;
             chk=0;
-            
         }
         if (chk)
         {
@@ -37,17 +36,21 @@ string removeAdjDuplicates(string &s){
     return s;
 }
 
-// string removeDuplicates(string s) {
-//     string res;
+string removeDuplicates(string s) {
+    string res;
     
-//     for(char ch : s){
-//         if(!res.empty() && res[res.size() - 1] == ch) res.pop_back();
-//         else res+=ch;
-//     }
-//     return res;
-// }
+    for(char ch : s){
+        cout << " res size  " << res.size() << endl;
+        cout << !res.empty();
+        if(!res.empty() && res[res.size() - 1] == ch) res.pop_back();
+        else res+=ch;
+        cout << "res " << res << endl;
+    }
+    return res;
+}
 
 int main(){
-    string s = "abbaca";
-    cout<<removeAdjDuplicates(s);
+    string s = "abbacaaa";
+    // cout<<removeAdjDuplicates(s);
+    cout << removeDuplicates(s);
 }
