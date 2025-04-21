@@ -96,5 +96,57 @@ int main() {
     cout<<"before t "<<t<<endl;
     t=t+1;//this doesn't makes the address +1 like if the address is 105 it doesn't get 106 it first leaves the exact space taken by that datatype as in int its 4 bytes so 105 becomes 109 ok
     cout<<"after t "<<t<<endl;
-    return 0;
+    
+
+
+
+     int arrmy[10] = {23, 122, 41, 67};
+   
+    cout <<" address of first memory block is " << arr << endl;
+    cout << arrmy[0] << endl;
+    cout <<" address of first memory block is " << &arr[0] << endl;
+
+    cout << "4th " << *arrmy << endl;
+    cout << "5th " << *arrmy + 1 << endl;
+    cout << "6th " << *(arrmy + 1) << endl;
+    cout << "7th " << *(arrmy) + 1 << endl;
+    cout << "8th " << arrmy[2] << endl;
+    cout << "9th " << *(arrmy+2) << endl;
+    
+
+     i = 3;
+    cout << i[arrmy] << endl;
+    //formulas :- for above line so technically both of them work okay
+    // arr[i] =*(arr+i)
+    // i[arr]=*(i+arr) // as arr is what give you address if you cout<<arr; you know so *(arr) gives the value inside that address (1st element in default after that you can add no. to it to access other elements of arr)
+
+    int temp_my[10] = {1,2,3};
+   cout << sizeof(temp_my) << endl;//gives the space of whole array
+   cout << " 1st " <<  sizeof(*temp_my) << endl;//printing gives temp gives address of 1st element and then * gives the element in that address which is int then sizeof gives space of that int
+   cout << " 2nd " <<  sizeof(&temp_my) << endl;//& gives the address' size in which the 1st element is stored
+
+   int *ptr4 = &temp_my[0];
+   cout << sizeof(ptr4) << endl ;//gives the size of ptr which stores the address
+   cout << sizeof(*ptr4) << endl ;//gives the size of address which is stored in the int pointer
+   cout << sizeof(&ptr4) << endl ;//gives the size of address in which the pointer is stored
+
+
+
+   int a[20] = {1,2,3,5};
+   cout << " ->" << &a[0] << endl;
+  cout << &a << endl;//gives the address of 1st element
+   cout << a << endl;//also //gives the address of 1st element
+
+   int *p = &a[0];
+   cout << p << endl;//gives the addres of pointer
+   cout << *p << endl;//gives the element stored in the pointer
+   cout << "-> " << &p << endl;
+
+   //line below give an error
+   int arr[10];
+//    arr=arr+1; //ERROR
+
+    // but if you'll try to do above line in ptr it'll work as that's pointer arithmetic so it'll 
+    //just move to the address of of next element when you +1 the pointer which'll be +4 in int arr's case
+    //cause' each element in int arr takes 4 bytes you know
 }

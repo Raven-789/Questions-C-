@@ -3,6 +3,29 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+bool hasPairWithSum(int arr[],int n,int target){
+    int left=0,right=n-1;
+
+    while (left<right)
+    {
+        int sum=arr[left]+arr[right];
+        if (sum==target)
+        {
+            return true;
+        }
+        else if(sum<target)
+        {
+            left++;
+        }
+        else{
+            right--;
+        }
+        
+    }
+    return false;
+    
+}
+
 void pair_sum(vector<int> &arr,int s){
     vector <vector <int>>ans;
     for (int i = 0; i < arr.size(); i++){
@@ -32,6 +55,18 @@ int main(){
     // for (const auto &pair : result) {
 //     //     cout << "[" << pair[0] << ", " << pair[1] << "]" << endl;
 //     // }
+
+    int arr1[]={1,2,3,9,11};
+    int target=10;
+    int n=5;
+
+    if (hasPairWithSum(arr1,n,target))
+    {
+        cout<<"Array has 2 no. with sum "<<target;
+    }else{
+        cout<<"No such pair found. ";
+    }
+    
 }
 
 
