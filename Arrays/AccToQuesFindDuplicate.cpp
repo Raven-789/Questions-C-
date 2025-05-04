@@ -42,8 +42,8 @@ int findDuplicate(vector<int> &arr){
 
 int main() {
     //vector is a dynamic sized array just know this much for now (if you haven't read about it)
-    vector<int> arr = {1, 2, 3, 4, 2}; // Example array with a duplicates
-   
+    // vector<int> arr = {1, 2, 3, 4, 2}; // Example array with a duplicates
+    vector<int> arr = {34,13,52,14,52};
     int duplicate = findDuplicate(arr);
     
     cout << "The duplicate element is: " << duplicate << endl;

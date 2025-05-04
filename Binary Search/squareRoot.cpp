@@ -29,7 +29,7 @@ int sqBinarySearch(int x){
 }
 
 double morePrecision(int n,int precision, int tempsol){
-    double factor =1 ;
+    double factor = 1 ;
     double ans=tempsol;
 
     for (int i = 0; i < precision; i++)
@@ -49,6 +49,7 @@ int main(){
     cout<<"Enter a number: ";
     cin>>n;
     int tempsol=sqBinarySearch(n); 
+    // cout<<tempsol;
     cout<<"Answer is "<<morePrecision(n,3,tempsol)<<endl;//tempsol is the integer part of the no. whose precision we want
     // cout<<sqBinarySearch(25);
 }

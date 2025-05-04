@@ -97,5 +97,5 @@ int findPosition(vector <int>arr,int n,int k){
 int main(){
     vector <int> arr={12, 15, 18, 2, 4};
     cout<<findPosition(arr,arr.size(),2)<<endl;
-    //there is a HW goto the vid's this part
+    // there is a HW goto the vid's this part
 }

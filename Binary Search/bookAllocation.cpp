@@ -83,7 +83,7 @@ int main(){
     // m is no of students
     // n is no. of books
     vector <int> arr={10,20,30,40};
-    cout<<bookAllocator(arr,4,3);
+    cout<<bookAllocator(arr,4,2);
 
     // vector <int> arr={15,17,20};//with this it gives -1
     // cout<<bookAllocator(arr,3,2);// This gives -1 yaaayyyyyy

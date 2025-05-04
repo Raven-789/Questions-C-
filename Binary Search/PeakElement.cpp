@@ -42,9 +42,10 @@ int peakElement(vector<int> arr){
     }
     return s;
 }
-
+ 
 int main(){
-    // vector <int>arr={0,1,0}; // I commented this so that I can put another vector with same name so not much editing in the existing code
-    vector <int>arr = {0,2,1,0};
+    vector <int>arr={0,1,0}; // I commented this so that I can put another vector with same name so not much editing in the existing code
+    // vector <int>arr = {0,2,1,0};
+    // vector <int>arr = {6,7,9,4,3,2,1};
     cout<<peakElement(arr)<<endl;
 }
