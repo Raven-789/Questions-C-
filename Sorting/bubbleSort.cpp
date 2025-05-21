@@ -1,6 +1,8 @@
 //Timpe Complexity O(n^2)
 //Space Complexity O(1)
 
+//use case in i th round the i th element goes to its right place
+
 #include<iostream>
 #include<vector>
 using namespace std;

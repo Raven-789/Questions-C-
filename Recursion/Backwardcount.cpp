@@ -7,8 +7,9 @@ void bwdcount(int x){
         return ;
     }
     cout<<x<<" ";
-    bwdcount(x-1);
-    // cout<<x<<" ";
+    bwdcount(x-1); 
+    cout<<endl;
+    cout<<x<<" ";
 }
 
 int main(){

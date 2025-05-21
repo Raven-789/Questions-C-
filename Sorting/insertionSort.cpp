@@ -8,7 +8,7 @@
 #include<vector>
 using namespace std;
 
-void insertionSort(vector <int> &arr,int n){
+void insertionSort( int arr[],int n){
     for (int i = 1 ; i < n; i++)
     {
         int temp=arr[i];
@@ -18,25 +18,28 @@ void insertionSort(vector <int> &arr,int n){
             if (arr[j]>temp)//if you change the sign it'll do descending order
             {
                 arr[j+1]=arr[j];
+                // swap(arr[j+1],arr[j]);
             }else{
-                break;
+                break; // its breaking here so that if the no. is greater that should be putted in that index
             }
         }
 
-    arr[j+1]=temp;    
+    arr[j+1]=temp;// this so the element j+1 doesn't repeat ok you can try to figure out by commenting it bn n
     }
     
 }
 
-void print(vector <int>arr){
-    for (int i = 0; i < arr.size(); i++)
+void print(int arr[],int n){
+    for (int i = 0; i < n; i++)
     {
         cout<<arr[i]<<" ";
     }
 }
 
 int main(){
-    vector <int> arr={55,64,32,7,44,6,3};
-    insertionSort(arr,arr.size());
-    print(arr);
+    // vector <int> arr={55,64,32,7,44,6,3};
+    int arr[]={55,64,32,7,44,6,3};
+    // insertionSort(arr,arr.size());
+    insertionSort(arr,7);
+    print(arr,7);
 }

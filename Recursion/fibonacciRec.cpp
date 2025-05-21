@@ -23,7 +23,8 @@ int fibo(int f){
     {
         return f;
     }else{
-        return fibo(f-1)+fibo(f-2);
+        cout<<fibo(f-1)+fibo(f-2);
+        // return fibo(f-1)+fibo(f-2);
     }
 }
 
