@@ -46,6 +46,8 @@ using namespace std;
     
 // }
 
+// Time complexity O(4^n) 
+
 void solve (int index, string str, string out, vector <string>& ans, string map[]){
     if(index >= str.length()){
         ans.push_back(out);

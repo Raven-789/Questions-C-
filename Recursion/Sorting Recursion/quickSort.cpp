@@ -49,11 +49,6 @@ using namespace std;
 
 
 
-
-
-
-
-
 //HIS CODEE MINE IS BETTER YAAYYYY !!! (I THINK YOU KNOW)
 //Sadly I'm not I'll be better next time I swear
 

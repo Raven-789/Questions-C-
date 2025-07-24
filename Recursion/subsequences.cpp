@@ -2,6 +2,14 @@
 #include <vector>
 using namespace std;
 
+// Time complexity
+// str = "abc":
+
+// Subsequence count = 2^3 = 8
+// Output: ["", "c", "b", "bc", "a", "ac", "ab", "abc"]
+// O(2^n)
+
+
 //Dry run of subset code and arr+1 logic revise today and I'll do it with bitwise operators
 
 void solve(int index,string str, string out, vector <string> & ans){
