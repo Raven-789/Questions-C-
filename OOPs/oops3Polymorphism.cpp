@@ -76,15 +76,15 @@ int main(){
 
     //Function Overriding
 
-    Dog d;
-    Cat c;
-    Tiger t;
-    Animal a;
+    // Dog d;
+    // Cat c;
+    // Tiger t;
+    // Animal a;
 
-    d.speak();
-    c.speak();
-    a.speak();
-    t.speak();//if a class doesn't has that implementation it only calls parent class function
+    // d.speak();
+    // c.speak();
+    // a.speak();
+    // t.speak();//if a class doesn't has that implementation it only calls parent class function
 
 
 
