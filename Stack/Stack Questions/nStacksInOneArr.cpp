@@ -67,7 +67,7 @@ class Nstacks{
 
         bool push(int X, int M){// element is X  | arr no. is M
         
-            //underflow condition
+            //Overflow condition
             if(freeSpot == -1){
                 return false;
             }
@@ -78,7 +78,7 @@ class Nstacks{
             //update freespot next is storing the free indexes in arr ok (for conceptual purposes)
             freeSpot = next[index];
 
-            //insert
+            //push the value
             arr[index] = X;
 
             //update next

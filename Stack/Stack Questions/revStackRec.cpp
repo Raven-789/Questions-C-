@@ -48,8 +48,11 @@ void pushStackStr(stack <char> &s, string str){ // we made it void as we've used
 // You are not allowed to use any extra space other than the internal stack space used due to recursion.
 
 
+//Its similar to queue reversal check that out tooo (this one was done first)
+//queue rev is different as stack inserts from right and pops from right too
+//and queue inserts from right and pops from left that's why they're different
 template <typename T>
-void insertAtBottom(stack <T> &s, int num){
+void insertAtBottom(stack <T> &s, T num){
 
     if(s.empty()){
 
@@ -77,7 +80,6 @@ void solve(stack <T> &s, int sz){
     T num = s.top();
     s.pop();
     solve(s, sz);
-
 //---------------     YOU CAN ALSO CALL A FUNCTION WHILE BACKTRACKING DAMNN ITS TOO MUCH RECURSION !!!-----------------------------------------------------------------------
     insertAtBottom(s,num);// he gave it from the approach
 
@@ -94,7 +96,7 @@ void stackRevRec(stack <T> &s){
 int main(){
 
     stack <int> s;
-    int num = 12345;
+    int num = 123456;
     pushStackInt(s,num);
     printStack(s);
     stackRevRec(s);

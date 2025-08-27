@@ -9,7 +9,8 @@ vector <int> slidingWindowMax(vector <int> &nums , int k){
 
     for (int i = 0 ; i < nums.size() ; i++){
         //Remove out of window
-        if(!dq.empty() && dq.front() <= i-k)  dq.pop_front();
+        if(!dq.empty() && dq.front() <= i-k) 
+            dq.pop_front();
 
         //Remove smaller values from back
         while(!dq.empty()&& nums[dq.back()]<nums[i])

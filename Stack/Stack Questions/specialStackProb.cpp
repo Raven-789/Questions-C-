@@ -1,5 +1,5 @@
 #include<iostream>
-#include<cstring>
+#include<cstring>//for memset
 #include<bits/stdc++.h> //Use this one for all structures
 using namespace std;
 
@@ -111,7 +111,7 @@ int main(){
     cout<<s.top()<<endl;
     s.push(5);
     s.push(3);
-    // s.push(9);
+    s.push(9);
     cout<<s.top()<<" top"<<endl;
     cout<<s.pop()<<" is popped"<<endl;
     cout<<s.pop()<<" is popped"<<endl;
