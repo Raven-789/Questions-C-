@@ -3,30 +3,40 @@
 #include<cstring>
 using namespace std;
 
-queue <int> queueRev(queue <int> q){
+class Hero {
+private:
+    char* name;
+    int power;
 
-    stack <int> s;
-    cout<<"Given Queue (from within the function): "<<endl;
-    // for(auto ele : q){// you can't use for each loop on queues as it doesn't gives iterators
-    while(!q.empty()){
+public:
+    // Default constructor
+    Hero() : name(nullptr), power(0) {}
 
-        s.push(q.front());
-        cout<<q.front()<<" ";
-        q.pop();
-
-    }
-    cout<<endl;
-
-    while(!s.empty()){
-
-        q.push(s.top());
-      //   cout<<s.top()<<" ";
-        s.pop();
-
+    // Parameterized constructor
+    Hero(const char* n, int p) : power(p) {
+        name = new char[strlen(n) + 1];
+        strcpy(name, n);
     }
 
-    return q;
-}
+    // Copy constructor
+    Hero(const Hero& other) : power(other.power) {
+        if (other.name) {
+            name = new char[strlen(other.name) + 1];
+            strcpy(name, other.name);
+        } else {
+            name = nullptr;
+        }
+    }
+
+    // Destructor
+    ~Hero() {
+        delete[] name;
+    }
+
+    void display() const {
+        cout << "Name: " << (name ? name : "Unknown") << ", Power: " << power << endl;
+    }
+};
 
 
 int main(){
